@@ -6,8 +6,8 @@
 
      <div class="collection with-header">
         <h4 class="collection-header">String Utils</h4>
-        <a href="#!" ng-click="activate();" class="collection-item">Reverse a String</a>
-        <a href="#!" class="collection-item">Calculate String Length</a>
+        <a ui-sref=".reverse" class="collection-item">Reverse a String</a>
+        <a ui-sref=".length" class="collection-item">Calculate String Length</a>
         <a href="#!" class="collection-item">Word Count Tool</a>
         <a href="#!" class="collection-item">Dummy LInk</a>
         <a href="#!" class="collection-item">Dummy LInk</a>
@@ -26,7 +26,9 @@
     </div>
 
     <div class="col s9">
-        
+        <ui-view>
+
+        </ui-view>
     </div>
 
 </div>

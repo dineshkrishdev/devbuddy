@@ -42,5 +42,16 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         url: "/viewer",
         templateUrl : "pages/viewer.html"
     })
+
+    .state("string-utils.reverse", {
+
+        url: "/reverse-string",
+        templateUrl: "pages/string-utils/reverse-string.html"
+    })
+    .state("string-utils.length", {
+
+        url: "/calculate-string-length",
+        templateUrl: "pages/string-utils/calculate-string-length.html"
+    })
             
 }]);
