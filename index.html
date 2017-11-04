@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="devBuddy">
 <head>
 <meta charset="ISO-8859-1">
 <title>DevBuddy - Developer Supporing Tool</title>
@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body ng-app="devBuddy">
+<body>
 	
 	<header>
 		<nav class="nav-extended">
@@ -27,14 +27,14 @@
 			</div>
 			<div class="nav-content">
 			<ul class="tabs tabs-transparent">
-				<li class="tab"><a href="#!formatter">Formatter</a></li>
-				<li class="tab"><a href="#!minifier">Minifier</a></li>
-				<li class="tab"><a href="#!validator">Validator</a></li>
-				<li class="tab"><a href="#!calculator">Calculator</a></li>
-				<li class="tab"><a href="#!converter">Converter</a></li>
-				<li class="tab"><a href="#!viewer">Viewer</a></li>
-				<li class="tab"><a href="#!spliter">Spliter</a></li>
-				<li class="tab"><a href="#!string_utils">String Utils</a></li>
+				<li class="tab"><a ui-sref=".formatter">Formatter</a></li>
+				<li class="tab"><a ui-sref=".minifier">Minifier</a></li>
+				<li class="tab"><a ui-sref=".validator">Validator</a></li>
+				<li class="tab"><a ui-sref=".calculator">Calculator</a></li>
+				<li class="tab"><a ui-sref=".converter">Converter</a></li>
+				<li class="tab"><a ui-sref=".viewer">Viewer</a></li>
+				<li class="tab"><a ui-sref=".spliter">Spliter</a></li>
+				<li class="tab"><a ui-sref=".string-utils">String Utils</a></li>
 			</ul>
 			</div>
 		</nav>
@@ -42,7 +42,7 @@
 
 
 	<main>
-		<div ng-view></div>
+		<div ui-view></div>
 	</main>
 
 
@@ -92,7 +92,7 @@
 							</a>
 						</li>
 						<li>
-							<a class="grey-text text-lighten-3" href="#!string_utils">
+							<a class="grey-text text-lighten-3" href="#!string-utils">
 								<i class="tiny material-icons">insert_link</i> String Utils
 							</a>
 						</li>
@@ -111,8 +111,8 @@
 
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/angular.min.js"></script>
-	<script type="text/javascript" src="js/angular-route.js"></script>
+	<script type="text/javascript" src="js/angular-ui-router.min.js"></script>
 	<script type="text/javascript" src="js/materialize.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
