@@ -30,3 +30,8 @@ app.config(function($routeProvider) {
         templateUrl : "pages/viewer.html"
     });
 });
+
+function activate(obj) {
+
+    $(obj).addClass("active");
+}
