@@ -1,4 +1,4 @@
-var app = angular.module("devBuddy", ["ui.router"]);
+var app = angular.module("devBuddy", ["ui.router", 'ngclipboard']);
  
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
 
@@ -55,3 +55,14 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     })
             
 }]);
+
+
+function copyStatus() {
+    Materialize.toast('Text Copied !!!', 2000);
+}
+
+app.filter('reverse', function() {
+        return function(str) {
+            return str.split("").reverse().join("");
+        };
+});

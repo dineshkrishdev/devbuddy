@@ -1,8 +1,29 @@
 <div class="card">
     <div class="card-content">
-        <p>Reverse a String</p>
+        <span class="card-title">Reverse a String</span>
+        <div class="divider"></div>
+        <br/>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">create</i>
+                        <input id="icon_prefix" type="text" class="validate" ng-model="inputStr"/>
+                        <label for="icon_prefix">Enter your text</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">done_all</i>
+                        <input id="reverse_output" type="text" class="validate" ng-value="(inputStr | reverse)"/>
+                    </div>
+                </div>
+            </form>
+        </div>   
     </div>
     <div class="card-action">
-        <a href="#">This is a link</a>
+        <a class="waves-effect waves-light btn" ngclipboard data-clipboard-target="#reverse_output" onclick="copyStatus();">
+            <i class="material-icons left">content_copy</i>Copy
+        </a>
     </div>
 </div>
