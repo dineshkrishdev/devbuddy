@@ -53,6 +53,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         url: "/calculate-string-length",
         templateUrl: "pages/string-utils/calculate-string-length.html"
     })
+    .state("string-utils.count", {
+
+        url: "/calculate-string-length",
+        templateUrl: "pages/string-utils/word-count.html"
+    })
             
 }]);
 
@@ -64,6 +69,15 @@ function copyStatus() {
 app.filter('reverse', function() {
         return function(str) {
             return str.split("").reverse().join("");
+        };
+});
+
+app.filter('length', function() {
+        return function(str) {
+            if(str.length == 0) {
+                return "Length : 0";
+            }
+            return "Length : "+str.length;
         };
 });
 
