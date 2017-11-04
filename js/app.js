@@ -66,3 +66,12 @@ app.filter('reverse', function() {
             return str.split("").reverse().join("");
         };
 });
+
+app.filter('wordCount', function() {
+        return function(str) {
+            if(str.length == 0) {
+                return "Count : 0";
+            }
+            return "Count : "+str.split(' ').length;
+        };
+});

@@ -1,8 +1,28 @@
 <div class="card">
-    <div class="card-content">
-        <p>Calculate String length</p>
-    </div>
-    <div class="card-action">
-        <a href="#">This is a link</a>
-    </div>
+    <form>
+        <div class="card-content">
+            <span class="card-title">Calculate String Length</span>
+            <div class="divider"></div>
+            <br/>
+            <div class="row">
+                <div class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea id="textarea1" class="materialize-textarea" ng-model="input"></textarea>
+                            <label for="textarea1">Enter your text</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <h5 ng-bind="(input | wordCount)"></h5>
+            </div>   
+        </div>
+        <div class="card-action">
+            <button class="btn waves-effect waves-light" type="reset" ng-click="input = ''">
+                Clear<i class="material-icons right">clear</i>
+            </button>
+        </div>
+    </form>
 </div>
