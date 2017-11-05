@@ -6,22 +6,22 @@
 
      <div class="collection with-header">
         <h5 class="collection-header">String Utils</h5>
-        <a ui-sref=".reverse" class="collection-item">Reverse a String</a>
-        <a ui-sref=".length" class="collection-item">Calculate String Length</a>
-        <a ui-sref=".count" class="collection-item">Word Count</a>
-        <a href="#!" class="collection-item">Dummy LInk</a>
-        <a href="#!" class="collection-item">Dummy LInk</a>
-        <a href="#!" class="collection-item">Dummy LInk</a>
-        <a href="#!" class="collection-item">Dummy LInk</a>
-        <a href="#!" class="collection-item">Dummy LInk</a>
-        <a href="#!" class="collection-item">Dummy LInk</a>
-        <a href="#!" class="collection-item">Dummy LInk</a>
-        <a href="#!" class="collection-item">Dummy LInk</a>
-        <a href="#!" class="collection-item">Dummy LInk</a>
-        <a href="#!" class="collection-item">Dummy LInk</a>
-        <a href="#!" class="collection-item">Dummy LInk</a>
-        <a href="#!" class="collection-item">Dummy LInk</a>
-        <a href="#!" class="collection-item">Dummy LInk</a>
+        <a ui-sref=".reverse" class="collection-item" onclick="activate(this);">Reverse a String</a>
+        <a ui-sref=".length" class="collection-item" onclick="activate(this);">Calculate String Length</a>
+        <a ui-sref=".count" class="collection-item" onclick="activate(this);">Word Count</a>
+        <a ui-sref=".lowercase" class="collection-item" onclick="activate(this);">Convert to Lowercase</a>
+        <a ui-sref=".uppercase" class="collection-item" onclick="activate(this);">Convert to Uppercase</a>
+        <a ui-sref=".propercase" class="collection-item" onclick="activate(this);">Convert to Propercase</a>
+        <a href="#!" class="collection-item" onclick="activate(this);">Dummy LInk</a>
+        <a href="#!" class="collection-item" onclick="activate(this);">Dummy LInk</a>
+        <a href="#!" class="collection-item" onclick="activate(this);">Dummy LInk</a>
+        <a href="#!" class="collection-item" onclick="activate(this);">Dummy LInk</a>
+        <a href="#!" class="collection-item" onclick="activate(this);">Dummy LInk</a>
+        <a href="#!" class="collection-item" onclick="activate(this);">Dummy LInk</a>
+        <a href="#!" class="collection-item" onclick="activate(this);">Dummy LInk</a>
+        <a href="#!" class="collection-item" onclick="activate(this);">Dummy LInk</a>
+        <a href="#!" class="collection-item" onclick="activate(this);">Dummy LInk</a>
+        <a href="#!" class="collection-item" onclick="activate(this);">Dummy LInk</a>
       </div>
     </div>
 
@@ -30,3 +30,12 @@
     </div>
 
 </div>
+
+<script>
+
+    $("a").click(function(){
+        $("a.active").removeClass("active");
+        $(this).addClass("active");
+    });
+
+</script>

@@ -43,6 +43,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         templateUrl : "pages/viewer.html"
     })
 
+    // string-utils routes
     .state("string-utils.reverse", {
 
         url: "/reverse-string",
@@ -58,14 +59,36 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         url: "/calculate-string-length",
         templateUrl: "pages/string-utils/word-count.html"
     })
+    .state("string-utils.lowercase", {
+
+        url: "/convert-lowercase",
+        templateUrl: "pages/string-utils/convert-lowercase.html"
+    })
+    .state("string-utils.uppercase", {
+
+        url: "/convert-uppercase",
+        templateUrl: "pages/string-utils/convert-uppercase.html"
+    })
+    .state("string-utils.propercase", {
+
+        url: "/convert-propercase",
+        templateUrl: "pages/string-utils/convert-propercase.html"
+    })
             
 }]);
 
+// activate link when it gets click
+$("a").click(function(){
+    $("a.active").removeClass("active");
+    $(this).addClass("active");
+});
 
-function copyStatus() {
-    Materialize.toast('Text Copied !!!', 2000);
+// toast message for copy to clipboard
+function copyStatus(obj) {
+    Materialize.toast('Text Copied :)', 2000);
 }
 
+// string-utils filters
 app.filter('reverse', function() {
         return function(str) {
             return str.split("").reverse().join("");
@@ -89,3 +112,10 @@ app.filter('wordCount', function() {
             return "Count : "+str.split(' ').length;
         };
 });
+
+app.filter('propercase', function() {
+        return function(str) {
+            return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+        };
+});
+

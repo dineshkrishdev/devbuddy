@@ -1,7 +1,7 @@
 <div class="card">
     <form>
         <div class="card-content">
-            <span class="card-title">Reverse a String</span>
+            <span class="card-title">Convert to Lowercase</span>
             <div class="divider"></div>
             <br/>
             <div class="row">
@@ -16,14 +16,14 @@
                     <div class="row">
                         <div class="input-field col s6">
                             <i class="material-icons prefix">done_all</i>
-                            <input id="reverse_output" type="text" class="validate" ng-value="(inputStr | reverse)"/>
+                            <input id="lowercase_output" type="text" class="validate" ng-value="(inputStr | lowercase)"/>
                         </div>
                     </div>
                 </div>
             </div>   
         </div>
         <div class="card-action" align="right">
-            <a class="waves-effect waves-light btn" ngclipboard data-clipboard-target="#reverse_output" onclick="copyStatus(this);">
+            <a class="waves-effect waves-light btn" ngclipboard data-clipboard-target="#lowercase_output" onclick="copyStatus(this);">
                 <i class="material-icons left">content_copy</i>Copy
             </a>
             <button class="btn waves-effect waves-light" type="reset" ng-click="inputStr = ''">
