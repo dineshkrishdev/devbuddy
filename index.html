@@ -8,115 +8,21 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+		
+	<div ng-include="'pages/header.html'"></div>		
 	
-	<header>
-		<nav class="nav-extended">
-			<div class="nav-wrapper">
-			<a href="#" class="brand-logo" style="margin-left:25px;">DevBuddy</a>
-			<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-			<ul id="nav-mobile" class="right hide-on-med-and-down">
-				<li><a ui-sref=".main">Home</a></li>
-				<li><a target="_blank" href="http://dineshkrishnan.co.in/">Creator</a></li>
-				<li><a target="_blank" href="https://github.com/dineshkrishdev/devbuddy">View Github</a></li>
-			</ul>
-			<ul class="side-nav" id="mobile-demo">
-				<li><a href="#">Home</a></li>
-				<li><a target="_blank" href="http://dineshkrishnan.co.in/">Creator</a></li>
-				<li><a target="_blank" href="https://github.com/dineshkrishdev/devbuddy">View Github</a></li>
-			</ul>
-			</div>
-			<div class="nav-content">
-			<ul class="tabs tabs-transparent">
-				<li class="tab"><a ui-sref=".formatter">Formatter</a></li>
-				<li class="tab"><a ui-sref=".minifier">Minifier</a></li>
-				<li class="tab"><a ui-sref=".validator">Validator</a></li>
-				<li class="tab"><a ui-sref=".calculator">Calculator</a></li>
-				<li class="tab"><a ui-sref=".converter">Converter</a></li>
-				<li class="tab"><a ui-sref=".viewer">Viewer</a></li>
-				<li class="tab"><a ui-sref=".spliter">Spliter</a></li>
-				<li class="tab"><a ui-sref=".string-utils">String Utils</a></li>
-			</ul>
-			</div>
-		</nav>
-	</header>
-
-
 	<main>
 		<ui-view>
-			loading...
+			<div>
+				<div class="progress">
+      				<div class="indeterminate"></div>
+  				</div>
+			</div>
 		</ui-view>
 	</main>
 
-
-	<footer class="page-footer">
-		<div class="container">
-			<div class="row">
-				<div class="col l6 s12">
-					<h5 class="white-text">What is DevBuddy?</h5>
-					<p class="grey-text text-lighten-4">
-						DevBuddy is open source develoepr supporting online tool. It has many useful tools for developer such
-						as Formatter, Validator, Minifier, and etc.
-					</p>
-					<h5 class="white-text">Who Made This?</h5>					
-					<p class="grey-text text-lighten-4" id="who-made-this">
-						Dinesh Krishnan
-					</p>
-				</div>
-				<div class="col l4 offset-l2 s12">
-					<h5 class="white-text">Quick Links</h5>
-					<ul>
-						<li>
-							<a class="grey-text text-lighten-3" href="#!formatter">
-								<i class="tiny material-icons">insert_link</i> Formatter
-							</a>
-						</li>
-						<li>
-							<a class="grey-text text-lighten-3" href="#!minifier">
-								<i class="tiny material-icons">insert_link</i> Minifier
-							</a>
-						</li>
-						<li>
-							<a class="grey-text text-lighten-3" href="#!validator">
-								<i class="tiny material-icons">insert_link</i> Validator
-							</a>
-						</li>
-						<li>
-							<a class="grey-text text-lighten-3" href="#!calculator">
-								<i class="tiny material-icons">insert_link</i> Calculator
-							</a>
-						</li>
-						<li>
-							<a class="grey-text text-lighten-3" href="#!converter">
-								<i class="tiny material-icons">insert_link</i> Converter
-							</a>
-						</li>
-						<li>
-							<a class="grey-text text-lighten-3" href="#!viewer">
-								<i class="tiny material-icons">insert_link</i> Viewer
-							</a>
-						</li>
-						<li>
-							<a class="grey-text text-lighten-3" href="#!spliter">
-								<i class="tiny material-icons">insert_link</i> Spliter
-							</a>
-						</li>
-						<li>
-							<a class="grey-text text-lighten-3" href="#!string-utils">
-								<i class="tiny material-icons">insert_link</i> String Utils
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="footer-copyright">
-			<div class="container">
-				&copy; 2017 Copyright Text
-				<a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-			</div>
-		</div>
-    </footer>
-
+	<div ng-include="'pages/footer.html'"></div>
+	
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/angular.min.js"></script>
 	<script type="text/javascript" src="js/angular-ui-router.min.js"></script>
