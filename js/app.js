@@ -42,6 +42,14 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         url: "/viewer",
         templateUrl : "pages/viewer.html"
     })
+    .state("tools", {
+        url: "/tools",
+        templateUrl : "pages/tools.html"
+    })
+    .state("web-resources", {
+        url: "/web-resources",
+        templateUrl : "pages/web-resources.html"
+    })
 
     // string-utils routes
     .state("string-utils.reverse", {
