@@ -82,6 +82,14 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         url: "/convert-propercase",
         templateUrl: "pages/string-utils/convert-propercase.html"
     })
+
+    // web-resources routes
+    .state("web-resources.browser-information", {
+
+        url: "/browser-information",
+        templateUrl: "pages/web-resources/browser-information.html"
+    })
+
             
 }]);
 
