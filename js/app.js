@@ -26,10 +26,6 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         url: "/minifier",
         templateUrl : "pages/minifier.html"
     })
-    .state("spliter", {
-        url: "/spliter",
-        templateUrl : "pages/spliter.html"
-    })
     .state("string-utils", {
         url: "/string-utils",
         templateUrl : "pages/string-utils.html"
