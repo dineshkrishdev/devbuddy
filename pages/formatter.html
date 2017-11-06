@@ -6,20 +6,20 @@
 
      <div class="collection with-header">
         <h5 class="collection-header">Formatter</h5>
-        <a ui-sref="#" class="collection-item">JSON Formatter</a>
-        <a ui-sref="#" class="collection-item">XML Formatter</a>
-        <a ui-sref="#" class="collection-item">CSS Formatter</a>
-        <a ui-sref="#" class="collection-item">SQL Formatter</a>
-        <a ui-sref="#" class="collection-item">HTML Formatter</a>
-        <a ui-sref="#" class="collection-item">JS Formatter</a>
-        <a ui-sref="#" class="collection-item">Dummy Link</a>
-        <a ui-sref="#" class="collection-item">Dummy Link</a>
-        <a ui-sref="#" class="collection-item">Dummy Link</a>
-        <a ui-sref="#" class="collection-item">Dummy Link</a>
-        <a ui-sref="#" class="collection-item">Dummy Link</a>
-        <a ui-sref="#" class="collection-item">Dummy Link</a>
-        <a ui-sref="#" class="collection-item">Dummy Link</a>
-        <a ui-sref="#" class="collection-item">Dummy Link</a>
+        <a ui-sref=".json-formatter" class="collection-item" onclick="activate(this);">JSON Formatter</a>
+        <a ui-sref=".xml-formatter" class="collection-item" onclick="activate(this);">XML Formatter</a>
+        <a ui-sref=".css-formatter" class="collection-item" onclick="activate(this);">CSS Formatter</a>
+        <a ui-sref=".sql-formatter" class="collection-item" onclick="activate(this);">SQL Formatter</a>
+        <a ui-sref=".html-formatter" class="collection-item" onclick="activate(this);">HTML Formatter</a>
+        <a ui-sref=".js-formatter" class="collection-item" onclick="activate(this);">JS Formatter</a>
+        <a ui-sref="#" class="collection-item" onclick="activate(this);">Dummy Link</a>
+        <a ui-sref="#" class="collection-item" onclick="activate(this);">Dummy Link</a>
+        <a ui-sref="#" class="collection-item" onclick="activate(this);">Dummy Link</a>
+        <a ui-sref="#" class="collection-item" onclick="activate(this);">Dummy Link</a>
+        <a ui-sref="#" class="collection-item" onclick="activate(this);">Dummy Link</a>
+        <a ui-sref="#" class="collection-item" onclick="activate(this);">Dummy Link</a>
+        <a ui-sref="#" class="collection-item" onclick="activate(this);">Dummy Link</a>
+        <a ui-sref="#" class="collection-item" onclick="activate(this);">Dummy Link</a>
       </div>
     </div>
 
@@ -28,3 +28,12 @@
     </div>
 
 </div>
+
+<script>
+
+    $("a").click(function(){
+        $("a.active").removeClass("active");
+        $(this).addClass("active");
+    });
+
+</script>

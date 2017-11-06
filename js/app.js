@@ -90,6 +90,60 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         templateUrl: "pages/web-resources/browser-information.html"
     })
 
+    // tools route
+    .state("tools.qr-code-generator", {
+
+        url: "/qr-code-generator",
+        templateUrl: "pages/tools/qr-code-generator.html"
+    })
+    .state("tools.qr-code-reader", {
+
+        url: "/qr-code-reader",
+        templateUrl: "pages/tools/qr-code-reader.html"
+    })
+    .state("tools.bar-code-generator", {
+
+        url: "/bar-code-generator",
+        templateUrl: "pages/tools/bar-code-generator.html"
+    })
+    .state("tools.bar-code-reader", {
+
+        url: "/bar-code-reader",
+        templateUrl: "pages/tools/bar-code-reader.html"
+    })
+
+    // formatter route
+    .state("formatter.json-formatter", {
+
+        url: "/json-formatter",
+        templateUrl: "pages/formatter/json-formatter.html"
+    })
+    .state("formatter.css-formatter", {
+
+        url: "/css-formatter",
+        templateUrl: "pages/formatter/css-formatter.html"
+    })
+    .state("formatter.html-formatter", {
+
+        url: "/html-formatter",
+        templateUrl: "pages/formatter/html-formatter.html"
+    })
+    .state("formatter.xml-formatter", {
+
+        url: "/xml-formatter",
+        templateUrl: "pages/formatter/xml-formatter.html"
+    })
+    .state("formatter.js-formatter", {
+
+        url: "/js-formatter",
+        templateUrl: "pages/formatter/js-formatter.html"
+    })
+    .state("formatter.sql-formatter", {
+
+        url: "/sql-formatter",
+        templateUrl: "pages/formatter/sql-formatter.html"
+    })
+
             
 }]);
 

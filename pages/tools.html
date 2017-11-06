@@ -6,20 +6,20 @@
 
      <div class="collection with-header">
         <h5 class="collection-header">Tools</h5>
-        <a ui-sref="#" class="collection-item">Dummy Link</a>
-        <a ui-sref="#" class="collection-item">Dummy Link</a>
-        <a ui-sref="#" class="collection-item">Dummy Link</a>
-        <a ui-sref="#" class="collection-item">Dummy Link</a>
-        <a ui-sref="#" class="collection-item">Dummy Link</a>
-        <a ui-sref="#" class="collection-item">Dummy Link</a>
-        <a ui-sref="#" class="collection-item">Dummy Link</a>
-        <a ui-sref="#" class="collection-item">Dummy Link</a>
-        <a ui-sref="#" class="collection-item">Dummy Link</a>
-        <a ui-sref="#" class="collection-item">Dummy Link</a>
-        <a ui-sref="#" class="collection-item">Dummy Link</a>
-        <a ui-sref="#" class="collection-item">Dummy Link</a>
-        <a ui-sref="#" class="collection-item">Dummy Link</a>
-        <a ui-sref="#" class="collection-item">Dummy Link</a>
+        <a ui-sref=".qr-code-generator" class="collection-item" onclick="activate(this);">QR Code Generator</a>
+        <a ui-sref=".qr-code-reader" class="collection-item" onclick="activate(this);">QR Code Reader</a>
+        <a ui-sref=".bar-code-generator" class="collection-item" onclick="activate(this);">Bar Code Generator</a>
+        <a ui-sref=".bar-code-reader" class="collection-item" onclick="activate(this);">Bar Code Reader</a>
+        <a ui-sref="#" class="collection-item" onclick="activate(this);">Dummy Link</a>
+        <a ui-sref="#" class="collection-item" onclick="activate(this);">Dummy Link</a>
+        <a ui-sref="#" class="collection-item" onclick="activate(this);">Dummy Link</a>
+        <a ui-sref="#" class="collection-item" onclick="activate(this);">Dummy Link</a>
+        <a ui-sref="#" class="collection-item" onclick="activate(this);">Dummy Link</a>
+        <a ui-sref="#" class="collection-item" onclick="activate(this);">Dummy Link</a>
+        <a ui-sref="#" class="collection-item" onclick="activate(this);">Dummy Link</a>
+        <a ui-sref="#" class="collection-item" onclick="activate(this);">Dummy Link</a>
+        <a ui-sref="#" class="collection-item" onclick="activate(this);">Dummy Link</a>
+        <a ui-sref="#" class="collection-item" onclick="activate(this);">Dummy Link</a>
       </div>
     </div>
 
@@ -28,3 +28,12 @@
     </div>
 
 </div>
+
+<script>
+
+    $("a").click(function(){
+        $("a.active").removeClass("active");
+        $(this).addClass("active");
+    });
+
+</script>
