@@ -46,9 +46,9 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         url: "/tools",
         templateUrl : "pages/tools.html"
     })
-    .state("web-resources", {
-        url: "/web-resources",
-        templateUrl : "pages/web-resources.html"
+    .state("resources", {
+        url: "/resources",
+        templateUrl : "pages/resources.html"
     })
 
     // string-utils routes
@@ -83,11 +83,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         templateUrl: "pages/string-utils/convert-propercase.html"
     })
 
-    // web-resources routes
-    .state("web-resources.browser-information", {
+    // resources routes
+    .state("resources.browser-information", {
 
         url: "/browser-information",
-        templateUrl: "pages/web-resources/browser-information.html"
+        templateUrl: "pages/resources/browser-information.html"
     })
 
     // tools route
