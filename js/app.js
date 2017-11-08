@@ -8,43 +8,53 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 
     .state('main', {
         url: "/main",
-        templateUrl: "pages/main.html" 
+        templateUrl: "pages/main.html",
+        data: {pageTitle: 'DevBuddy - Developer Supporing Tool'} 
     })
     .state("calculator", {
         url: "/calculator",
-        templateUrl : "pages/calculator.html"
+        templateUrl : "pages/calculator.html",
+        data: {pageTitle: 'Online Calculator for Developers - DevBuddy Developer Tools'}
     })
     .state("converter", {
         url: "/converter",
-        templateUrl : "pages/converter.html"
+        templateUrl : "pages/converter.html",
+        data: {pageTitle: 'Online Converter for Developers - DevBuddy Developer Tools'}
     })
     .state("formatter", {
         url: "/formatter",
-        templateUrl : "pages/formatter.html"
+        templateUrl : "pages/formatter.html",
+        data: {pageTitle: 'Online Formatter for Developers - DevBuddy Developer Tools'}
     })
     .state("minifier", {
         url: "/minifier",
-        templateUrl : "pages/minifier.html"
+        templateUrl : "pages/minifier.html",
+        data: {pageTitle: 'Online Minifier for Developers - DevBuddy Developer Tools'}
     })
     .state("string-utils", {
         url: "/string-utils",
-        templateUrl : "pages/string-utils.html"
+        templateUrl : "pages/string-utils.html",
+        data: {pageTitle: 'Online String Utils for Developers - DevBuddy Developer Tools'}
     })
     .state("validator", {
         url: "/validator",
-        templateUrl : "pages/validator.html"
+        templateUrl : "pages/validator.html",
+        data: {pageTitle: 'Online Validator for Developers - DevBuddy Developer Tools'}
     })
     .state("viewer", {
         url: "/viewer",
-        templateUrl : "pages/viewer.html"
+        templateUrl : "pages/viewer.html",
+        data: {pageTitle: 'Online Viewer for Developers - DevBuddy Developer Tools'}
     })
     .state("tools", {
         url: "/tools",
-        templateUrl : "pages/tools.html"
+        templateUrl : "pages/tools.html",
+        data: {pageTitle: 'Online Tools for Developers - DevBuddy Developer Tools'}
     })
     .state("resources", {
         url: "/resources",
-        templateUrl : "pages/resources.html"
+        templateUrl : "pages/resources.html",
+        data: {pageTitle: 'Online Resources for Developers - DevBuddy Developer Tools'}
     })
 
     // string-utils routes
@@ -142,6 +152,26 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 
             
 }]);
+
+app.directive('title', ['$rootScope', '$timeout',
+  function($rootScope, $timeout) {
+    return {
+      link: function() {
+
+        var listener = function(event, toState) {
+
+          $timeout(function() {
+            $rootScope.title = (toState.data && toState.data.pageTitle) 
+            ? toState.data.pageTitle 
+            : 'DevBuddy - Developer Supporing Tool';
+          });
+        };
+
+        $rootScope.$on('$stateChangeSuccess', listener);
+      }
+    };
+  }
+]);
 
 // activate link when it gets click
 $("a").click(function(){
