@@ -188,35 +188,3 @@ $("a").click(function(){
 function copyStatus(obj) {
     Materialize.toast('Text Copied :)', 2000);
 }
-
-// string-utils filters
-app.filter('reverse', function() {
-        return function(str) {
-            return str.split("").reverse().join("");
-        };
-});
-
-app.filter('length', function() {
-        return function(str) {
-            if(str.length == 0) {
-                return "Length : 0";
-            }
-            return "Length : "+str.length;
-        };
-});
-
-app.filter('wordCount', function() {
-        return function(str) {
-            if(str.length == 0) {
-                return "Count : 0";
-            }
-            return "Count : "+str.split(' ').length;
-        };
-});
-
-app.filter('propercase', function() {
-        return function(str) {
-            return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
-        };
-});
-
