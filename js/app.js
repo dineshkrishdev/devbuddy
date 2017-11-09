@@ -11,6 +11,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         templateUrl: "pages/main.html",
         data: {pageTitle: 'DevBuddy - Developer Supporing Tool'} 
     })
+    .state('find-tool', {
+        url: "/find-tool",
+        templateUrl: "pages/find-tool.html",
+        data: {pageTitle: 'DevBuddy - Developer Supporing Tool'} 
+    })
     .state("calculator", {
         url: "/calculator",
         templateUrl : "pages/calculator.html",
