@@ -154,6 +154,41 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         url: "/sql-formatter",
         templateUrl: "pages/formatter/sql-formatter.html"
     })
+    .state("formatter.c-formatter", {
+
+        url: "/c-formatter",
+        templateUrl: "pages/formatter/c-formatter.html"
+    })
+    .state("formatter.cpp-formatter", {
+
+        url: "/cpp-formatter",
+        templateUrl: "pages/formatter/cpp-formatter.html"
+    })
+    .state("formatter.java-formatter", {
+
+        url: "/java-formatter",
+        templateUrl: "pages/formatter/java-formatter.html"
+    })
+    .state("formatter.perl-formatter", {
+
+        url: "/perl-formatter",
+        templateUrl: "pages/formatter/perl-formatter.html"
+    })
+    .state("formatter.ruby-formatter", {
+
+        url: "/ruby-formatter",
+        templateUrl: "pages/formatter/ruby-formatter.html"
+    })
+    .state("formatter.avro-formatter", {
+
+        url: "/avro-formatter",
+        templateUrl: "pages/formatter/avro-formatter.html"
+    })
+    .state("formatter.python-formatter", {
+
+        url: "/python-formatter",
+        templateUrl: "pages/formatter/python-formatter.html"
+    })
 
             
 }]);
