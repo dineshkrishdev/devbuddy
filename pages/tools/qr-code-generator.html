@@ -5,11 +5,15 @@
             <div class="divider"></div>
             <br/>
             <div class="row">
-                <div class="col s12">
-
-                        <input id="text" type="text" oninput="makeCode();" /><br />
-                        <div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
-                    
+                <div class="col s6">
+                    <div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
+                </div>
+                <div class="col s6">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">create</i>
+                        <input id="text" type="text" class="validate" oninput="generateQR(this);"/>
+                        <label for="text">Enter your text</label>
+                    </div>
                 </div>
             </div>   
         </div>
@@ -34,15 +38,13 @@
         height : 100
     });
 
-    function makeCode () {		
-        var elText = document.getElementById("text");
-        
-        if (!elText.value) {
-            elText.focus();
+    function generateQR (obj) {		
+
+        if (!text.value) {
+            text.focus();
             return;
-        }
-        
-        qrcode.makeCode(elText.value);
+        }      
+        qrcode.makeCode(text.value);
     }
 
 </script>
