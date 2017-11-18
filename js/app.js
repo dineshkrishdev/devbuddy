@@ -93,6 +93,51 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         url: "/convert-propercase",
         templateUrl: "pages/string-utils/convert-propercase.html"
     })
+    .state("string-utils.password-generator", {
+
+        url: "/password-generator",
+        templateUrl: "pages/string-utils/password-generator.html"
+    })
+    .state("string-utils.random-word-generator", {
+
+        url: "/random-word-generator",
+        templateUrl: "pages/string-utils/random-word-generator.html"
+    })
+    .state("string-utils.remove-empty-line", {
+
+        url: "/remove-empty-line",
+        templateUrl: "pages/string-utils/remove-empty-line.html"
+    })
+    .state("string-utils.remove-extra-space", {
+
+        url: "/remove-extra-space",
+        templateUrl: "pages/string-utils/remove-extra-space.html"
+    })
+    .state("string-utils.sort-text", {
+
+        url: "/sort-text",
+        templateUrl: "pages/string-utils/sort-text.html"
+    })
+    .state("string-utils.string-builder", {
+
+        url: "/string-builder",
+        templateUrl: "pages/string-utils/string-builder.html"
+    })
+    .state("string-utils.split-string", {
+
+        url: "/split-string",
+        templateUrl: "pages/string-utils/split-string.html"
+    })
+    .state("string-utils.text-minifier", {
+        
+                url: "/text-minifier",
+                templateUrl: "pages/string-utils/text-minifier.html"
+            })
+    .state("string-utils.text-reverse", {
+
+        url: "/text-reverse",
+        templateUrl: "pages/string-utils/text-reverse.html"
+    })
 
     // resources routes
     .state("resources.browser-information", {
@@ -121,6 +166,56 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 
         url: "/bar-code-reader",
         templateUrl: "pages/tools/bar-code-reader.html"
+    })
+    .state("tools.image-color-picker", {
+
+        url: "/image-color-picker",
+        templateUrl: "pages/tools/image-color-picker.html"
+    })
+    .state("tools.image-comparison", {
+
+        url: "/image-comparison",
+        templateUrl: "pages/tools/image-comparison.html"
+    })
+    .state("tools.image-placeholder", {
+
+        url: "/image-placeholer",
+        templateUrl: "pages/tools/image-placeholer.html"
+    })
+    .state("tools.gif-generator", {
+
+        url: "/git-generator",
+        templateUrl: "pages/tools/git-generator.html"
+    })
+    .state("tools.random-icon-generator", {
+
+        url: "/random-icon-generator",
+        templateUrl: "pages/tools/random-icon-generator.html"
+    })
+    .state("tools.table-generator", {
+
+        url: "/table-generator",
+        templateUrl: "pages/tools/table-generator.html"
+    })
+    .state("tools.current-location", {
+
+        url: "/current-location",
+        templateUrl: "pages/tools/current-location.html"
+    })
+    .state("tools.number-series-generator", {
+
+        url: "/number-series-generator",
+        templateUrl: "pages/tools/number-series-generator.html"
+    })
+    .state("tools.url-parser", {
+
+        url: "/qr-url-parser",
+        templateUrl: "pages/tools/url-parser.html"
+    })
+    .state("tools.paragraph-generator", {
+
+        url: "/paragraph-generator",
+        templateUrl: "pages/tools/paragraph-generator.html"
     })
 
     // formatter route
