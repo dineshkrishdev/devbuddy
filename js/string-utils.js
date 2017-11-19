@@ -28,3 +28,9 @@ app.filter('propercase', function() {
         return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
     };
 });
+
+function removeEmptyLines() {
+    var text = $('#remove_empty_lines_content').val();
+    text = text.replace(/(?:(?:\r\n|\r|\n)\s*){2}/gm, "\n");
+    $('#remove_empty_lines_content').val(text);
+}

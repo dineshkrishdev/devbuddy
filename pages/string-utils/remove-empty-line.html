@@ -1,0 +1,31 @@
+<div class="card">
+    <form>
+        <div class="card-content">
+            <span class="card-title">Remove Empty Line</span>
+            <div class="divider"></div>
+            <br/>
+            <div class="row">
+                <div class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea id="remove_empty_lines_content" class="materialize-textarea"></textarea>
+                            <label for="remove_empty_lines_content">Enter your text</label>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <div class="card-action" align="right">
+            <button class="btn waves-effect waves-light" onclick="removeEmptyLines();">
+                Remove<i class="material-icons right">remove</i>
+            </button>
+            <a class="waves-effect waves-light btn" ngclipboard data-clipboard-target="#remove_empty_lines_content" onclick="copyStatus(this);">
+                    <i class="material-icons left">content_copy</i>Copy
+                </a>
+            <button class="btn waves-effect waves-light" type="reset">
+                Clear<i class="material-icons right">clear</i>
+            </button>
+        </div>
+    </form>
+</div>
