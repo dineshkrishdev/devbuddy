@@ -5,21 +5,42 @@
             <div class="divider"></div>
             <br/>
             <div class="row">
-                <div class="col s6">
-                    <div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
+                <div class="col s3">
+                    <div id="qrcode"></div>
                 </div>
-                <div class="col s6">
+                <div class="col s9">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">create</i>
-                        <input id="text" type="text" class="validate" oninput="generateQR(this);"/>
+                        <input id="text" type="text" class="validate" oninput="generateQR(this.value);"/>
                         <label for="text">Enter your text</label>
+                    </div>
+                    <div class="row">
+                        <div class="col s6"></div>
+                        <div class="col s6" align="center">
+                            <div class="card">
+                                <div class="card-content">
+                                    <span class="card-title">Select type</span>
+                                    <div class="divider"></div><br/>
+                                    <div class="row">
+                                        <div class="col s6">
+                                            <input type="checkbox" class="filled-in" id="qrcode_1" name="qrcode_filetype" checked/>
+                                            <label for="qrcode_1">PNG</label>
+                                        </div>
+                                        <div class="col s6">
+                                            <input type="checkbox" class="filled-in" id="qrcode_2" name="qrcode_filetype"/>
+                                            <label for="qrcode_2">JPG</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>   
         </div>
         <div class="card-action" align="right">
-            <a class="waves-effect waves-light btn" ngclipboard data-clipboard-target="#reverse_output" onclick="copyStatus(this);">
-                <i class="material-icons left">content_copy</i>Copy
+            <a class="waves-effect waves-light btn">
+                <i class="material-icons left">file_download</i>Download
             </a>
             <button class="btn waves-effect waves-light" type="reset" ng-click="inputStr = ''">
                 Clear<i class="material-icons right">clear</i>
@@ -32,19 +53,22 @@
 <script type="text/javascript" src="./lib/qrcodejs/qrcode.min.js"></script>
 
 <script>
+    
 
     var qrcode = new QRCode(document.getElementById("qrcode"), {
-        width : 100,
-        height : 100
+        width : 200,
+        height : 200
     });
 
-    function generateQR (obj) {		
+    function generateQR (text) {		
 
-        if (!text.value) {
-            text.focus();
+        if (!text) {
+            $("#text").focus();
             return;
         }      
-        qrcode.makeCode(text.value);
+        qrcode.makeCode(text);
     }
+
+    generateQR("devbuddy");
 
 </script>
