@@ -34,3 +34,9 @@ function removeEmptyLines() {
     text = text.replace(/(?:(?:\r\n|\r|\n)\s*){2}/gm, "\n");
     $('#remove_empty_lines_content').val(text);
 }
+
+function removeExtraSpace() {
+    var text = $('#remove_extra_space_content').val();
+    text = text.replace(/\s+/g, ' ').trim();
+    $('#remove_extra_space_content').val(text);
+}
