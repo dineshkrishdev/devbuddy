@@ -180,12 +180,12 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     .state("tools.image-placeholder", {
 
         url: "/image-placeholer",
-        templateUrl: "pages/tools/image-placeholer.html"
+        templateUrl: "pages/tools/image-placeholder.html"
     })
     .state("tools.gif-generator", {
 
-        url: "/git-generator",
-        templateUrl: "pages/tools/git-generator.html"
+        url: "/gif-generator",
+        templateUrl: "pages/tools/gif-generator.html"
     })
     .state("tools.random-icon-generator", {
 
