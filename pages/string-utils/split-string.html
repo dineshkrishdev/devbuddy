@@ -7,15 +7,54 @@
             <div class="row">
                 <div class="col s12">
                     <div class="row">
-                        
+                        <div class="input-field col s5">
+                            <textarea id="split_string_content_1" class="materialize-textarea"></textarea>
+                            <label for="split_string_content_1">Enter your text</label>
+                        </div>
+                        <div class="col s2">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <select id="split_token">
+                                        <option value="" disabled selected>Select</option>
+                                        <option value=",">,</option>
+                                        <option value=";">;</option>
+                                        <option value="|">|</option>
+                                        <option value="-">-</option>
+                                        <option value=" ">Space</option>
+                                    </select>   
+                                </div>
+                            </div>
+                            <div class="row center">
+                                <a class="waves-effect waves-light btn" onclick="doSplit();">
+                                    <i class="material-icons">chevron_right</i>
+                                </a>
+                            </div>
+                            <div class="row center">
+                                <a class="waves-effect waves-light btn" onclick="buildString();">
+                                    <i class="material-icons">chevron_left</i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="input-field col s5">
+                            <textarea id="split_string_content_2" class="materialize-textarea"></textarea>
+                            <label for="split_string_content_2">Enter your text</label>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="card-action" align="right">
-            <button class="btn waves-effect waves-light" type="reset" ng-click="input = ''">
+            <button class="btn waves-effect waves-light" type="reset">
                 Clear<i class="material-icons right">clear</i>
             </button>
         </div>
     </form>
 </div>
+
+<script>
+
+    $(document).ready(function() {
+        $('select').material_select();
+    });
+
+</script>

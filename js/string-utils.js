@@ -76,8 +76,34 @@ function password_generator( len ) {
 }
 
 function textReverse() {
-
     var str = $('#text_reverse_content').val();
     $('#text_reverse_content').val(str.split("").reverse().join(""));
     showStatus("Text Reversed :)");
+}
+
+function doSplit() {
+    var str = $('#split_string_content_1').val();
+    var token = $('#split_token').val();
+    var ouptut = str.split(token);
+    var data = "";
+    ouptut.forEach(element => { 
+        data += element + "\n";
+    });
+    $('#split_string_content_2').val(data);
+}
+
+function buildString() {
+
+    var str = $('#split_string_content_2').val();
+    var token = $('#split_token').val();
+    if(token == null) {
+        showStatus("Please select token!");
+        return;
+    }
+    var lines = str.match(/[^\r\n]+/g);
+    var data = "";
+    lines.forEach(element => { 
+        data += element + token;
+    });
+    $('#split_string_content_1').val(data);
 }
