@@ -318,3 +318,7 @@ $("a").click(function(){
 function copyStatus(obj) {
     Materialize.toast('Text Copied :)', 2000);
 }
+
+function showStatus(text) {
+    Materialize.toast(text, 2000);
+}

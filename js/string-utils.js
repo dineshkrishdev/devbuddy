@@ -40,3 +40,15 @@ function removeExtraSpace() {
     text = text.replace(/\s+/g, ' ').trim();
     $('#remove_extra_space_content').val(text);
 }
+
+function sortText() {
+    var data = "";
+    var text = $('#sort_text_content').val();
+    var lines = text.match(/[^\r\n]+/g);
+    lines = lines.sort();
+    lines.forEach(element => { 
+        data += element + "\n";
+    });
+    $('#sort_text_content').val(data);
+    showStatus("Sorted !!!");
+}

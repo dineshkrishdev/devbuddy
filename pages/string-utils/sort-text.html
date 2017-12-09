@@ -7,12 +7,22 @@
             <div class="row">
                 <div class="col s12">
                     <div class="row">
-                        
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea id="sort_text_content" class="materialize-textarea" ng-model="input"></textarea>
+                            <label for="sort_text_content">Enter your text</label>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="card-action" align="right">
+            <button class="btn waves-effect waves-light" onclick="sortText();">
+                    Sort<i class="material-icons right">sort</i>
+            </button>
+            <a class="waves-effect waves-light btn" ngclipboard data-clipboard-target="#sort_text_content" onclick="copyStatus(this);">
+                <i class="material-icons left">content_copy</i>Copy
+            </a>
             <button class="btn waves-effect waves-light" type="reset" ng-click="input = ''">
                 Clear<i class="material-icons right">clear</i>
             </button>
